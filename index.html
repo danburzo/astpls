@@ -3,88 +3,47 @@
 	<head>
 		<meta charset='utf-8'>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>ășț pls</title>
-
-		<style>
-			body {
-				text-align: center;
-				padding: 2em;
-				/*background: #f0f0f0;*/
-				color: #333;
-				font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-				line-height: 1.4;
-			}
-
-			table {
-				font-size: 3em;
-				display: inline-block;
-				border-collapse: collapse;
-				border: 0.1em solid #333;
-				background: #fff;
-				font-weight: 300;
-				margin: 0.5em 0;
-			}
-
-			th {
-				border-bottom: 0.1em solid #333;
-				font-weight: inherit;
-			}
-
-
-			th, td {
-				padding: 0.1em 0.5em;
-			}
-
-			tr :first-child {
-				border-right: 0.1em solid #333;
-			}
-
-			a {
-				color: inherit;
-			}
-
-			.da {
-				color: #2ECC71;
-			}
-
-			.nu {
-				color: #E74C3C;
-			}
-
-			h1, p {
-				font-weight: 400;
-				margin: 0;
-			}
-
-			ul {
-				list-style: none;
-				padding: 0;
-				margin: 1em 0;
-			}
-		</style>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<title>ășț pls</title>	
 	</head>
 	<body>
 
-		<h1>Așadar</h1>
-		<table>
-			<tr><th class='nu'>✗</th><th class='da'>✓</th></tr>
-			<tr><td>Ãã</td><td>Ăă</td></tr>
-			<tr><td>Şş</td><td>Șș</td></tr>
-			<tr><td>Ţţ</td><td>Țț</td></tr>
-		</table>
-		<p>Citește:</p>
-		<ul>
-			<li><a href='http://en.wikipedia.org/wiki/Romanian_alphabet' title='Romanian alphabet'>Romanian alphabet</a> &mdash; Wikipedia</li>
-			<li><a href='http://kitblog.com/2008/10/romanian_diacritic_marks.html' target='_blank' title='Romanian Diacritic Marks'>Romanian Diacritic Marks</a> &mdash; Cristian Kit Paul</li>
-			<li><a href="http://www.decatorevista.ro/diacritice/">Căciuliță, coif, virguliță</a> &mdash; Lavinia Gliga, Decât o Revistă</li>
-		</ul>
-		<script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-		  ga('create', 'UA-58301478-1', 'auto');
-		  ga('send', 'pageview');
-		</script>
+		<header>
+			<h1><strong>ășț pls</strong>: foarte mic îndreptar de tipografie în limba română</h1>
+		</header>
+
+
+		<article>
+			<div class='corect-gresit'>
+				<p>
+					<span class='corect'>Ăă</span> <em>cu căciulă</em>
+					<span class='gresit'>Ãã</span> <em>cu tilda</em>
+					<span class='gresit'>Ǎǎ</span> <em>cu caron</em>
+				</p>
+				<p>
+					<span class='corect'>Șș</span> <em>cu virgulă</em>
+					<span class='corect'>Țț</span> <em>cu virgulă</em>
+					<span class='gresit'>Şş</span> <em>cu sedilă</em>
+					<span class='gresit'>Ţţ</span> <em>cu sedilă</em>
+				</p>
+				<p>
+					<span class='corect'>„ ”</span> <em>99 jos, 99 sus</em>
+					<span class='gresit'>„ “</span> <em>99 jos, 66 sus</em>
+					<span class='gresit'>“ ”</span> <em>66 sus, 99 sus</em>
+					<span class='gresit'>" "</span> <em>în niciun caz</em>
+				</p>
+			</div>
+
+			<h2>Foarte mică bibliografie</h2>
+			<ul>
+				<li><a href='http://en.wikipedia.org/wiki/Romanian_alphabet' title='Romanian alphabet'>Romanian alphabet</a> pe Wikipedia</li>
+				<li><a href='http://kitblog.com/2008/10/romanian_diacritic_marks.html' target='_blank' title='Romanian Diacritic Marks'>Romanian Diacritic Marks</a> de Cristian Kit Paul</li>
+				<li><a href="http://www.decatorevista.ro/diacritice/">Căciuliță, coif, virguliță</a> de Lavinia Gliga pentru Decât o Revistă</li>
+			</ul>
+
+		</article>
+		<footer>
+			(Acesta este un lucru făcut de <a href='http://danburzo.ro'>Dan Burzo</a> întru folosul public)
+		</footer>
 	</body>
 </html>
