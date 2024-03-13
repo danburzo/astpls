@@ -1,0 +1,4 @@
+# Prettier's formatting of Markdown is bad
+# and it breaks .njk templates by introducing random whitespace.
+*.md
+*.njk

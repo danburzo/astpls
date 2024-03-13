@@ -1,0 +1,29 @@
+{
+	"name": "astpls",
+	"version": "1.0.0",
+	"description": "astpls.ro website",
+	"main": "index.js",
+	"private": true,
+	"scripts": {
+		"prepare": "git config core.hooksPath .git-hooks",
+		"start": "npx @11ty/eleventy --serve",
+		"build": "rm -rf build && npx @11ty/eleventy",
+		"deploy": "npm run build && gh-pages -d build --dotfiles"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/danburzo/astpls.git"
+	},
+	"author": "Dan Burzo",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/danburzo/astpls/issues"
+	},
+	"homepage": "https://github.com/danburzo/astpls#readme",
+	"devDependencies": {
+		"@11ty/eleventy": "^2.0.1",
+		"gh-pages": "^6.1.1",
+		"prettier": "^3.2.5",
+		"pretty-quick": "^4.0.0"
+	}
+}
