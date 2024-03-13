@@ -11,24 +11,24 @@
 			margin: 0;
 			padding: 1em;
 			background: #fef4ee;
+			letter-spacing: 1.4;
 		}
 
-
-		.bucata {
-			white-space: nowrap;
-		}
-
-		.fraza {
-			font-size: 3em;
-		}
-
-		.hellip {
-			color: #999;
+		h1, h2, h3, h4 {
+			font-family: sans-serif;
+			font-size: 1em;
 		}
 
 		.logo {
 			width: 4em;
 			height: auto;
+		}
+
+		header {
+			display: flex;
+			align-items: center;
+			gap: 1rem;
+			padding: 1rem 0;
 		}
 
 		code {
@@ -82,19 +82,19 @@
 
 		.char-set-caption {
 			text-align: center;
-			padding: 1rem;
+			padding: 0.5rem;
 			background: rgb(0 0 0 / 0.1);
 			border-top: 1px solid rgb(0 0 0 / 0.3);
 		}
 
 		.char {
 			padding: 1rem;
+			text-align: center;
 		}
 
 		.char-sample {
 			font-size: 4em;
 			padding: 0.5rem;
-			text-align: center;
 		}
 
 		.dim {
@@ -112,195 +112,323 @@
 	<article>
 		<h2>Caracterele corecte</h2>
 
-<div class='char-entry'>
-	<div class='char-group char-group--correct'>
-		<div class='char-set'>
-			<div class='char'>
-				<div class='char-sample'>Ă</div>
-				<div><code><strong>U+0102</strong> LATIN CAPITAL LETTER A WITH BREVE</code></div>
+<div class="char-entry">
+	<div class="char-group char-group--correct">
+		<div class="char-set">
+			<div class="char">
+				<div class="char-sample">Ă</div>
+				<div>
+					<code
+						><strong>U+0102</strong> LATIN CAPITAL LETTER A WITH
+						BREVE</code
+					>
+				</div>
 			</div>
-			<div class='char'>
-				<div class='char-sample'>ă</div>
-				<div><code><strong>U+0103</strong> LATIN SMALL LETTER A WITH BREVE</code></div>
+			<div class="char">
+				<div class="char-sample">ă</div>
+				<div>
+					<code
+						><strong>U+0103</strong> LATIN SMALL LETTER A WITH
+						BREVE</code
+					>
+				</div>
 			</div>
 		</div>
-		<div class='char-set-caption'>cu breve ✓</div>
+		<div class="char-set-caption">cu breve ✓</div>
 	</div>
 
-	<div class='char-group char-group--incorrect'>
-		<div class='char-set'>
-			<div class='char'>
-				<div class='char-sample'>Ã</div>
-				<div><code><strong>U+00C3</strong> LATIN CAPITAL LETTER A WITH TILDE</code></div>
+	<div class="char-group char-group--incorrect">
+		<div class="char-set">
+			<div class="char">
+				<div class="char-sample">Ã</div>
+				<div>
+					<code
+						><strong>U+00C3</strong> LATIN CAPITAL LETTER A WITH
+						TILDE</code
+					>
+				</div>
 			</div>
-			<div class='char'>
-				<div class='char-sample'>ã</div>
-				<div><code><strong>U+00E3</strong> LATIN SMALL LETTER A WITH TILDE</code></div>
+			<div class="char">
+				<div class="char-sample">ã</div>
+				<div>
+					<code
+						><strong>U+00E3</strong> LATIN SMALL LETTER A WITH
+						TILDE</code
+					>
+				</div>
 			</div>
 		</div>
-		<div class='char-set-caption'>cu tildă ×</div>
+		<div class="char-set-caption">nu cu tildă</div>
 	</div>
 
-	<div class='char-group char-group--incorrect'>
-		<div class='char-set'>
-			<div class='char'>
-				<div class='char-sample'>Ǎ</div>
-				<div><code><strong>U+01CD</strong> LATIN CAPITAL LETTER A WITH CARON</code></div>
+	<div class="char-group char-group--incorrect">
+		<div class="char-set">
+			<div class="char">
+				<div class="char-sample">Ǎ</div>
+				<div>
+					<code
+						><strong>U+01CD</strong> LATIN CAPITAL LETTER A WITH
+						CARON</code
+					>
+				</div>
 			</div>
-			<div class='char'>
-				<div class='char-sample'>ǎ</div>
-				<div><code><strong>U+01CE</strong> LATIN SMALL LETTER A WITH CARON</code></div>
+			<div class="char">
+				<div class="char-sample">ǎ</div>
+				<div>
+					<code
+						><strong>U+01CE</strong> LATIN SMALL LETTER A WITH
+						CARON</code
+					>
+				</div>
 			</div>
 		</div>
-		<div class='char-set-caption'>cu caron ×</div>
+		<div class="char-set-caption">nu cu caron</div>
 	</div>
 </div>
 
-<div class='char-entry'>
-	<div class='char-group char-group--correct'>
-		<div class='char-set'>
-			<div class='char'>
-				<div class='char-sample'>Ș</div>
-				<div><code><strong>U+0218</strong> LATIN CAPITAL LETTER S WITH COMMA BELOW</code></div>
+<div class="char-entry">
+	<div class="char-group char-group--correct">
+		<div class="char-set">
+			<div class="char">
+				<div class="char-sample">Ș</div>
+				<div>
+					<code
+						><strong>U+0218</strong> LATIN CAPITAL LETTER S WITH
+						COMMA BELOW</code
+					>
+				</div>
 			</div>
-			<div class='char'>
-				<div class='char-sample'>ș</div>
-				<div><code><strong>U+0219</strong> LATIN SMALL LETTER S WITH COMMA BELOW</code></div>
+			<div class="char">
+				<div class="char-sample">ș</div>
+				<div>
+					<code
+						><strong>U+0219</strong> LATIN SMALL LETTER S WITH COMMA
+						BELOW</code
+					>
+				</div>
 			</div>
 		</div>
-		<div class='char-set-caption'>cu virgulă ✓</div>
+		<div class="char-set-caption">cu virgulă ✓</div>
 	</div>
 
-	<div class='char-group char-group--incorrect'>
-		<div class='char-set'>
-			<div class='char'>
-				<div class='char-sample'>Ş</div>
-				<div><code><strong>U+015E</strong> LATIN CAPITAL LETTER S WITH CEDILLA</code></div>
+	<div class="char-group char-group--incorrect">
+		<div class="char-set">
+			<div class="char">
+				<div class="char-sample">Ş</div>
+				<div>
+					<code
+						><strong>U+015E</strong> LATIN CAPITAL LETTER S WITH
+						CEDILLA</code
+					>
+				</div>
 			</div>
-			<div class='char'>
-				<div class='char-sample'>ş</div>
-				<div><code><strong>U+015F</strong> LATIN SMALL LETTER S WITH CEDILLA</code></div>
+			<div class="char">
+				<div class="char-sample">ş</div>
+				<div>
+					<code
+						><strong>U+015F</strong> LATIN SMALL LETTER S WITH
+						CEDILLA</code
+					>
+				</div>
 			</div>
 		</div>
-		<div class='char-set-caption'>cu sedilă ×</div>
+		<div class="char-set-caption">nu cu sedilă</div>
 	</div>
 </div>
 
-<div class='char-entry'>
-	<div class='char-group char-group--correct'>
-		<div class='char-set'>
-			<div class='char'>
-				<div class='char-sample'>Ț</div>
-				<div><code><strong>U+021A</strong> LATIN CAPITAL LETTER T WITH COMMA BELOW</code></div>
+<div class="char-entry">
+	<div class="char-group char-group--correct">
+		<div class="char-set">
+			<div class="char">
+				<div class="char-sample">Ț</div>
+				<div>
+					<code
+						><strong>U+021A</strong> LATIN CAPITAL LETTER T WITH
+						COMMA BELOW</code
+					>
+				</div>
 			</div>
-			<div class='char'>
-				<div class='char-sample'>ț</div>
-				<div><code><strong>U+021B</strong> LATIN SMALL LETTER T WITH COMMA BELOW</code></div>
+			<div class="char">
+				<div class="char-sample">ț</div>
+				<div>
+					<code
+						><strong>U+021B</strong> LATIN SMALL LETTER T WITH COMMA
+						BELOW</code
+					>
+				</div>
 			</div>
 		</div>
-		<div class='char-set-caption'>cu virgulă ✓</div>
+		<div class="char-set-caption">cu virgulă ✓</div>
 	</div>
 
-	<div class='char-group char-group--incorrect'>
-		<div class='char-set'>
-			<div class='char'>
-				<div class='char-sample'>Ţ</div>
-				<div><code><strong>U+0103</strong> LATIN CAPITAL LETTER A WITH BREVE</code></div>
+	<div class="char-group char-group--incorrect">
+		<div class="char-set">
+			<div class="char">
+				<div class="char-sample">Ţ</div>
+				<div>
+					<code
+						><strong>U+0103</strong> LATIN CAPITAL LETTER A WITH
+						BREVE</code
+					>
+				</div>
 			</div>
-			<div class='char'>
-				<div class='char-sample'>ţ</div>
-				<div><code><strong>U+0103</strong> LATIN SMALL LETTER A WITH BREVE</code></div>
+			<div class="char">
+				<div class="char-sample">ţ</div>
+				<div>
+					<code
+						><strong>U+0103</strong> LATIN SMALL LETTER A WITH
+						BREVE</code
+					>
+				</div>
 			</div>
 		</div>
-		<div class='char-set-caption'>cu sedilă ×</div>
+		<div class="char-set-caption">nu cu sedilă</div>
 	</div>
 </div>
 
-<div class='char-entry'>
-	<div class='char-group char-group--correct'>
-		<div class='char-set'>
-			<div class='char'>
-				<div class='char-sample'><span class=dim>abc</span>’</div>
-				<div><code><strong>U+2019</strong> RIGHT SINGLE QUOTATION MARK</code></div>
+<div class="char-entry">
+	<div class="char-group char-group--correct">
+		<div class="char-set">
+			<div class="char">
+				<div class="char-sample"><span class="dim">abc</span>’</div>
+				<div>
+					<code
+						><strong>U+2019</strong> RIGHT SINGLE QUOTATION
+						MARK</code
+					>
+				</div>
 			</div>
 		</div>
-		<div class='char-set-caption'>apostrof ✓</div>
+		<div class="char-set-caption">apostrof ✓</div>
 	</div>
 
-	<div class='char-group char-group--incorrect'>
-		<div class='char-set'>
-			<div class='char'>
-				<div class='char-sample'><span class=dim>abc</span>'</div>
-				<div><code><strong>U+0027</strong> APOSTROPHE</code></div>
+	<div class="char-group char-group--incorrect">
+		<div class="char-set">
+			<div class="char">
+				<div class="char-sample"><span class="dim">abc</span>'</div>
+				<div>
+					<code><strong>U+0027</strong> APOSTROPHE</code>
+				</div>
 			</div>
 		</div>
-		<div class='char-set-caption'>apostrof drept ×</div>
+		<div class="char-set-caption">nu apostrof drept</div>
 	</div>
-	<div class='char-group char-group--incorrect'>
-		<div class='char-set'>
-			<div class='char'>
-				<div class='char-sample'><span class=dim>abc</span>′</div>
-				<div><code><strong>U+2032</strong> PRIME</code></div>
+	<div class="char-group char-group--incorrect">
+		<div class="char-set">
+			<div class="char">
+				<div class="char-sample"><span class="dim">abc</span>′</div>
+				<div>
+					<code><strong>U+2032</strong> PRIME</code>
+				</div>
 			</div>
 		</div>
-		<div class='char-set-caption'>prim ×</div>
+		<div class="char-set-caption">nu prim</div>
 	</div>
 </div>
 
-<div class='char-entry'>
-	<div class='char-group char-group--correct'>
-		<div class='char-set'>
-			<div class='char'>
-				<div class='char-sample'>„<span class=dim>abc</span>”</div>
-				<div><code><strong>U+201E</strong> DOUBLE LOW-9 QUOTATION MARK</code></div>
-				<div><code><strong>U+201D</strong> RIGHT DOUBLE QUOTATION MARK</code></div>
+<div class="char-entry">
+	<div class="char-group char-group--correct">
+		<div class="char-set">
+			<div class="char">
+				<div class="char-sample">„<span class="dim">abc</span>”</div>
+				<div>
+					<code
+						><strong>U+201E</strong> DOUBLE LOW-9 QUOTATION
+						MARK</code
+					>
+				</div>
+				<div>
+					<code
+						><strong>U+201D</strong> RIGHT DOUBLE QUOTATION
+						MARK</code
+					>
+				</div>
 			</div>
 		</div>
-		<div class='char-set-caption'>99 jos, 99 sus ✓</div>
+		<div class="char-set-caption">99 jos, 99 sus ✓</div>
 	</div>
 
-	<div class='char-group char-group--incorrect'>
-		<div class='char-set'>
-			<div class='char'>
-				<div class='char-sample'>„<span class=dim>abc</span>“</div>
-				<div><code><strong>U+201E</strong> DOUBLE LOW-9 QUOTATION MARK</code></div>
-				<div><code><strong>U+201C</strong> LEFT DOUBLE QUOTATION MARK</code></div>
+	<div class="char-group char-group--incorrect">
+		<div class="char-set">
+			<div class="char">
+				<div class="char-sample">„<span class="dim">abc</span>“</div>
+				<div>
+					<code
+						><strong>U+201E</strong> DOUBLE LOW-9 QUOTATION
+						MARK</code
+					>
+				</div>
+				<div>
+					<code
+						><strong>U+201C</strong> LEFT DOUBLE QUOTATION
+						MARK</code
+					>
+				</div>
 			</div>
 		</div>
-		<div class='char-set-caption'>99 jos, 66 sus ×</div>
+		<div class="char-set-caption">nu 99 jos, 66 sus</div>
 	</div>
-	<div class='char-group char-group--incorrect'>
-		<div class='char-set'>
-			<div class='char'>
-				<div class='char-sample'>“<span class=dim>abc</span>”</div>
-				<div><code><strong>U+201C</strong> LEFT DOUBLE QUOTATION MARK</code></div>
-				<div><code><strong>U+201D</strong> RIGHT DOUBLE QUOTATION MARK</code></div>
+	<div class="char-group char-group--incorrect">
+		<div class="char-set">
+			<div class="char">
+				<div class="char-sample">“<span class="dim">abc</span>”</div>
+				<div>
+					<code
+						><strong>U+201C</strong> LEFT DOUBLE QUOTATION
+						MARK</code
+					>
+				</div>
+				<div>
+					<code
+						><strong>U+201D</strong> RIGHT DOUBLE QUOTATION
+						MARK</code
+					>
+				</div>
 			</div>
 		</div>
-		<div class='char-set-caption'>66 sus, 99 sus ×</div>
+		<div class="char-set-caption">nu 66 sus, 99 sus</div>
 	</div>
-	<div class='char-group char-group--incorrect'>
-		<div class='char-set'>
-			<div class='char'>
-				<div class='char-sample'>"<span class=dim>abc</span>"</div>
-				<div><code><strong>U+0022</strong> QUOTATION MARK</code></div>
-				<div><code><strong>U+0022</strong> QUOTATION MARK</code></div>
+	<div class="char-group char-group--incorrect">
+		<div class="char-set">
+			<div class="char">
+				<div class="char-sample">"<span class="dim">abc</span>"</div>
+				<div>
+					<code><strong>U+0022</strong> QUOTATION MARK</code>
+				</div>
+				<div>
+					<code><strong>U+0022</strong> QUOTATION MARK</code>
+				</div>
 			</div>
 		</div>
-		<div class='char-set-caption'>ghilimele drepte ×</div>
+		<div class="char-set-caption">nu ghilimele drepte</div>
 	</div>
 </div>
 
-<div class='char-entry'>
-	<div class='char-group char-group--correct'>
-		<div class='char-set'>
-			<div class='char'>
-				<div class='char-sample'><span class=dim>„<span class=dim>abc</span></span>«<span class=dim>abc</span>»<span class=dim><span class=dim>abc</span>”</span></div>
-				<div><code><strong>U+00AB</strong> LEFT-POINTING DOUBLE ANGLE QUOTATION MARK</code></div>
-				<div><code><strong>U+00BB</strong> RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK</code></div>
+<div class="char-entry">
+	<div class="char-group char-group--correct">
+		<div class="char-set">
+			<div class="char">
+				<div class="char-sample">
+					<span class="dim">„<span class="dim">abc</span></span
+					>«<span class="dim">abc</span>»<span class="dim"
+						><span class="dim">abc</span>”</span
+					>
+				</div>
+				<div>
+					<code
+						><strong>U+00AB</strong> LEFT-POINTING DOUBLE ANGLE
+						QUOTATION MARK</code
+					>
+				</div>
+				<div>
+					<code
+						><strong>U+00BB</strong> RIGHT-POINTING DOUBLE ANGLE
+						QUOTATION MARK</code
+					>
+				</div>
 			</div>
 		</div>
-		<div class='char-set-caption'>ghilimele franțuzești ✓</div>
+		<div class="char-set-caption">ghilimele franțuzești ✓</div>
 	</div>
 </div>
 
