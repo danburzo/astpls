@@ -10,22 +10,9 @@
 			font-family: serif;
 			margin: 0;
 			padding: 1em;
+			background: #fef4ee;
 		}
 
-		.corect, .gresit {
-			font-size: 4em;
-			display: inline-block;
-			margin: 0 0.2em;
-			position: relative;
-		}
-
-		.corect:after {
-			content: '👍';
-		}
-
-		.gresit:after {
-			content: '👎';
-		}
 
 		.bucata {
 			white-space: nowrap;
@@ -43,6 +30,77 @@
 			width: 4em;
 			height: auto;
 		}
+
+		code {
+			font-size: 0.75em;
+			font-family: monospace, monospace;
+		}
+
+		.char-entry {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			margin: 1rem 0;
+			color: rgb(0 0 0 / 0.75);
+			gap: 1px;
+		}
+
+		@media (max-width: 30em) {
+			.char-entry	{
+				display: block;
+			}
+
+			.char-entry > * {
+				margin-bottom: 1px;
+			}
+		}
+
+		.char-group {
+			border: 1px solid rgb(0 0 0 / 0.3);
+			display: flex;
+			flex-direction: column;
+		}
+
+		.char-group > * {
+			flex-grow: 1;
+		}
+
+		.char-group--correct {
+			background: #a5cc87;
+		}
+
+		.char-group--incorrect {
+			background: #fde3e1;
+		}
+
+		.char-set {
+			display: flex;
+		}
+
+		.char-set > * {
+			flex-grow: 1;
+		}
+
+		.char-set-caption {
+			text-align: center;
+			padding: 1rem;
+			background: rgb(0 0 0 / 0.1);
+			border-top: 1px solid rgb(0 0 0 / 0.3);
+		}
+
+		.char {
+			padding: 1rem;
+		}
+
+		.char-sample {
+			font-size: 4em;
+			padding: 0.5rem;
+			text-align: center;
+		}
+
+		.dim {
+			color: rgb(0 0 0 / 0.25);
+		}
+
 		</style>
 </head>
 <body>
