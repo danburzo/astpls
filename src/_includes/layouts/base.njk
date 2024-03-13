@@ -8,23 +8,22 @@
 </head>
 <body>
 	<header>
-			<a href='/'>
-				{% include "components/logo.njk" %}
-			</a>
-			<h1>{{ strings.tagline }}</h1>
-			<ul role=list class='lang-switcher'>
-			{% for language in site.languages %}
-				<li>
-				{% if page.lang == language.code %}
-					<span>{{ language.label }}</span>
-				{% else %}
-					<a href='{{ language.path }}'>{{ language.label }}</a>
-				{% endif %}
-				</li>
-			{% endfor %}
-			</ul>
-		</header>
-	<h2>{{ title }}</h2>
+		<a href='/'>
+			{% include "components/logo.njk" %}
+		</a>
+		<h1>{{ strings.tagline }}</h1>
+		<ul role=list class='lang-switcher'>
+		{% for language in site.languages %}
+			<li>
+			{% if page.lang == language.code %}
+				<span>{{ language.label }}</span>
+			{% else %}
+				<a href='{{ language.path }}'>{{ language.label }}</a>
+			{% endif %}
+			</li>
+		{% endfor %}
+		</ul>
+	</header>
 	<article>
 		{% block content %}
 		{% include 'components/chars.njk' %}
