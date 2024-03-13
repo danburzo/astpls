@@ -1,129 +1,437 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>ășț pls: fițuică tipografică pentru limba română</title>
-		<style type="text/css">
-			body {
-				font-family: serif;
-				margin: 0;
-				padding: 1em;
-				background: #fef4ee;
-			}
-
-			.bucata {
-				white-space: nowrap;
-			}
-
-			.fraza {
-				font-size: 3em;
-			}
-
-			.hellip {
-				color: #999;
-			}
-
-			.logo {
-				width: 4em;
-				height: auto;
-			}
-
-			code {
-				font-size: 0.75em;
-				font-family: monospace, monospace;
-			}
-
-			.char-entry {
-				display: grid;
-				grid-template-columns: repeat(4, 1fr);
-				margin: 1rem 0;
-				color: rgb(0 0 0 / 0.75);
-				gap: 1px;
-			}
-
-			@media (max-width: 30em) {
-				.char-entry {
-					display: block;
-				}
-
-				.char-entry > * {
-					margin-bottom: 1px;
-				}
-			}
-
-			.char-group {
-				border: 1px solid rgb(0 0 0 / 0.3);
-				display: flex;
-				flex-direction: column;
-			}
-
-			.char-group > * {
-				flex-grow: 1;
-			}
-
-			.char-group--correct {
-				background: #a5cc87;
-			}
-
-			.char-group--incorrect {
-				background: #fde3e1;
-			}
-
-			.char-set {
-				display: flex;
-			}
-
-			.char-set > * {
-				flex-grow: 1;
-			}
-
-			.char-set-caption {
-				text-align: center;
-				padding: 1rem;
-				background: rgb(0 0 0 / 0.1);
-				border-top: 1px solid rgb(0 0 0 / 0.3);
-			}
-
-			.char {
-				padding: 1rem;
-			}
-
-			.char-sample {
-				font-size: 4em;
-				padding: 0.5rem;
-				text-align: center;
-			}
-
-			.dim {
-				color: rgb(0 0 0 / 0.25);
-			}
-		</style>
-	</head>
-	<body>
-		<header>
-			<svg
-				class="logo"
-				xmlns="http://www.w3.org/2000/svg"
-				viewBox="0 0 160.21 111.61"
-			>
-				<path
-					d="M512.85,411.93a18.53,18.53,0,0,0-4.27-7.56,19,19,0,0,0-7.8-4.79A36.14,36.14,0,0,0,489,397.9q-11.31,0-18,4.22t-8.31,13.67l14.78,1.39q1.38-7.28,11-7.27a12.58,12.58,0,0,1,7.22,2.07q3.06,2.08,3.06,7.62v3L491,423a93,93,0,0,0-11.37,1.15,36.85,36.85,0,0,0-10.1,3.12,18.79,18.79,0,0,0-7.27,6.12,17.25,17.25,0,0,0-2.77,10.15,18.79,18.79,0,0,0,1.62,8.14,15.76,15.76,0,0,0,4.33,5.6,17.58,17.58,0,0,0,6.35,3.23,27.86,27.86,0,0,0,7.67,1q7,0,11.49-2.54a31.61,31.61,0,0,0,8-6.58V460h15.23V421.91A35,35,0,0,0,512.85,411.93Zm-14.26,24.29a12.58,12.58,0,0,1-1.38,6.18,12.9,12.9,0,0,1-3.58,4.1,16.75,16.75,0,0,1-10.16,2.88,8.77,8.77,0,0,1-5.77-1.73,5.81,5.81,0,0,1-2.08-4.73,10.46,10.46,0,0,1,.58-3.58,6,6,0,0,1,2.25-2.83,14.33,14.33,0,0,1,4.79-2,41.6,41.6,0,0,1,8.2-1l7.15-.34Zm37,4.62c.53,3.54,2,5.85,4.27,6.92a19.46,19.46,0,0,0,8.31,1.62q5.76,0,8.25-1.44a5,5,0,0,0,2.48-4.68,5.87,5.87,0,0,0-1.56-4q-1.56-1.73-5.94-2.42l-8.31-1.38q-11-1.74-16.33-5.95t-5.37-12.75a16,16,0,0,1,1.9-7.85,17.39,17.39,0,0,1,5.37-5.89,26.76,26.76,0,0,1,8.25-3.75,39.69,39.69,0,0,1,10.56-1.33,42.8,42.8,0,0,1,12,1.44,23.5,23.5,0,0,1,7.9,3.87A15.89,15.89,0,0,1,572,409a29.31,29.31,0,0,1,2.25,7.16L559.8,418a10.55,10.55,0,0,0-3.63-6.12q-2.59-2-8.37-2a23.09,23.09,0,0,0-5.37.52,10.59,10.59,0,0,0-3.34,1.32,5,5,0,0,0-1.74,1.85,4.47,4.47,0,0,0-.51,2,4.88,4.88,0,0,0,1.78,4.21c1.2.89,3.52,1.64,7,2.26l7.62,1.26a53.49,53.49,0,0,1,10.5,2.66,20.25,20.25,0,0,1,6.64,4,12.86,12.86,0,0,1,3.46,5.6,26.08,26.08,0,0,1,1,7.5,16.6,16.6,0,0,1-6.46,13.68q-6.47,5.13-20,5.14a52.87,52.87,0,0,1-10.33-1,26,26,0,0,1-8.78-3.41,19.68,19.68,0,0,1-6.34-6.46,21.45,21.45,0,0,1-2.83-10.16Zm52-28.51h-9.46V399.75h9.46v-16h16.16v16h13.85v12.58H603.74v27.82c0,3.15.65,5.29,2,6.4a7.54,7.54,0,0,0,5.08,1.68,30.64,30.64,0,0,0,3.29-.18,18.38,18.38,0,0,0,3.29-.63l2.31,11.89a38.73,38.73,0,0,1-6.52,1.44,48,48,0,0,1-6.06.4q-9.93,0-14.72-4.73t-4.79-15.93Z"
-					transform="translate(-459.46 -373.89)"
-				/>
-				<path
-					d="M481.51,373.89q0,4.39,2,6.12a6.74,6.74,0,0,0,4.62,1.73,6.58,6.58,0,0,0,4.5-1.73q2-1.72,2-6.12h11.54q0,9-4.9,13.45t-13.1,4.44q-8.31,0-13.1-4.44t-4.79-13.45Zm59.25,93.73h17.08l-12.12,17.89h-14Zm54.9,0h17.08l-12.12,17.89h-14Z"
-					transform="translate(-459.46 -373.89)"
-					fill="#44ad6f"
-				/>
-			</svg>
-			<h1>Fițuică tipografică pentru limba română</h1>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ășț pls: Typographic cheatsheet for the Romanian language</title>
+	<link rel='stylesheet' href='/style.css' type='text/css'>
+</head>
+<body>
+	<header>
+			<a href='/'>
+				<svg class='logo' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160.21 111.61"><path d="M512.85,411.93a18.53,18.53,0,0,0-4.27-7.56,19,19,0,0,0-7.8-4.79A36.14,36.14,0,0,0,489,397.9q-11.31,0-18,4.22t-8.31,13.67l14.78,1.39q1.38-7.28,11-7.27a12.58,12.58,0,0,1,7.22,2.07q3.06,2.08,3.06,7.62v3L491,423a93,93,0,0,0-11.37,1.15,36.85,36.85,0,0,0-10.1,3.12,18.79,18.79,0,0,0-7.27,6.12,17.25,17.25,0,0,0-2.77,10.15,18.79,18.79,0,0,0,1.62,8.14,15.76,15.76,0,0,0,4.33,5.6,17.58,17.58,0,0,0,6.35,3.23,27.86,27.86,0,0,0,7.67,1q7,0,11.49-2.54a31.61,31.61,0,0,0,8-6.58V460h15.23V421.91A35,35,0,0,0,512.85,411.93Zm-14.26,24.29a12.58,12.58,0,0,1-1.38,6.18,12.9,12.9,0,0,1-3.58,4.1,16.75,16.75,0,0,1-10.16,2.88,8.77,8.77,0,0,1-5.77-1.73,5.81,5.81,0,0,1-2.08-4.73,10.46,10.46,0,0,1,.58-3.58,6,6,0,0,1,2.25-2.83,14.33,14.33,0,0,1,4.79-2,41.6,41.6,0,0,1,8.2-1l7.15-.34Zm37,4.62c.53,3.54,2,5.85,4.27,6.92a19.46,19.46,0,0,0,8.31,1.62q5.76,0,8.25-1.44a5,5,0,0,0,2.48-4.68,5.87,5.87,0,0,0-1.56-4q-1.56-1.73-5.94-2.42l-8.31-1.38q-11-1.74-16.33-5.95t-5.37-12.75a16,16,0,0,1,1.9-7.85,17.39,17.39,0,0,1,5.37-5.89,26.76,26.76,0,0,1,8.25-3.75,39.69,39.69,0,0,1,10.56-1.33,42.8,42.8,0,0,1,12,1.44,23.5,23.5,0,0,1,7.9,3.87A15.89,15.89,0,0,1,572,409a29.31,29.31,0,0,1,2.25,7.16L559.8,418a10.55,10.55,0,0,0-3.63-6.12q-2.59-2-8.37-2a23.09,23.09,0,0,0-5.37.52,10.59,10.59,0,0,0-3.34,1.32,5,5,0,0,0-1.74,1.85,4.47,4.47,0,0,0-.51,2,4.88,4.88,0,0,0,1.78,4.21c1.2.89,3.52,1.64,7,2.26l7.62,1.26a53.49,53.49,0,0,1,10.5,2.66,20.25,20.25,0,0,1,6.64,4,12.86,12.86,0,0,1,3.46,5.6,26.08,26.08,0,0,1,1,7.5,16.6,16.6,0,0,1-6.46,13.68q-6.47,5.13-20,5.14a52.87,52.87,0,0,1-10.33-1,26,26,0,0,1-8.78-3.41,19.68,19.68,0,0,1-6.34-6.46,21.45,21.45,0,0,1-2.83-10.16Zm52-28.51h-9.46V399.75h9.46v-16h16.16v16h13.85v12.58H603.74v27.82c0,3.15.65,5.29,2,6.4a7.54,7.54,0,0,0,5.08,1.68,30.64,30.64,0,0,0,3.29-.18,18.38,18.38,0,0,0,3.29-.63l2.31,11.89a38.73,38.73,0,0,1-6.52,1.44,48,48,0,0,1-6.06.4q-9.93,0-14.72-4.73t-4.79-15.93Z" transform="translate(-459.46 -373.89)" fill="#3a3a76"/><path d="M481.51,373.89q0,4.39,2,6.12a6.74,6.74,0,0,0,4.62,1.73,6.58,6.58,0,0,0,4.5-1.73q2-1.72,2-6.12h11.54q0,9-4.9,13.45t-13.1,4.44q-8.31,0-13.1-4.44t-4.79-13.45Zm59.25,93.73h17.08l-12.12,17.89h-14Zm54.9,0h17.08l-12.12,17.89h-14Z" transform="translate(-459.46 -373.89)" fill="#648cc2"/></svg>
+			</a>
+			<h1>Typographic cheatsheet for the Romanian language</h1>
+			<ul role=list class='lang-switcher'>
+			
+				<li>
+				
+					<a href='/'>Ro</a>
+				
+				</li>
+			
+				<li>
+				
+					<span>En</span>
+				
+				</li>
+			
+			</ul>
 		</header>
-		<h2></h2>
-		<article>Content EN</article>
-		<footer>
-			<strong>ășț pls</strong> este un lucru făcut de
-			<a href="https://danburzo.ro">Dan Cătălin Burzo</a>.
-		</footer>
-	</body>
+	<h2></h2>
+	<article>
+		
+		
+<h2>The correct characters</h2>
+
+<div class='char-entry'>
+	
+	<div class='
+		char-group 
+		char-group--correct 
+	'>
+		<div class="char-set">
+		
+			<div class="char">
+				<div class="char-sample">Ă</div>
+				
+				<div class="unicode">
+					<code><strong>U+0102</strong> LATIN CAPITAL LETTER A WITH BREVE</code>
+				</div>
+				
+			</div>
+		
+			<div class="char">
+				<div class="char-sample">ă</div>
+				
+				<div class="unicode">
+					<code><strong>U+0103</strong> LATIN SMALL LETTER A WITH BREVE</code>
+				</div>
+				
+			</div>
+		
+		</div>
+		<div class='char-set-caption'>with breve</div>
+	</div>
+	
+	<div class='
+		char-group 
+		char-group--incorrect 
+	'>
+		<div class="char-set">
+		
+			<div class="char">
+				<div class="char-sample">Ã</div>
+				
+				<div class="unicode">
+					<code><strong>U+00C3</strong> LATIN CAPITAL LETTER A WITH TILDE</code>
+				</div>
+				
+			</div>
+		
+			<div class="char">
+				<div class="char-sample">ã</div>
+				
+				<div class="unicode">
+					<code><strong>U+00E3</strong> LATIN SMALL LETTER A WITH TILDE</code>
+				</div>
+				
+			</div>
+		
+		</div>
+		<div class='char-set-caption'>not with tilde</div>
+	</div>
+	
+	<div class='
+		char-group 
+		char-group--incorrect 
+	'>
+		<div class="char-set">
+		
+			<div class="char">
+				<div class="char-sample">Ǎ</div>
+				
+				<div class="unicode">
+					<code><strong>U+01CD</strong> LATIN CAPITAL LETTER A WITH CARON</code>
+				</div>
+				
+			</div>
+		
+			<div class="char">
+				<div class="char-sample">ǎ</div>
+				
+				<div class="unicode">
+					<code><strong>U+01CE</strong> LATIN SMALL LETTER A WITH CARON</code>
+				</div>
+				
+			</div>
+		
+		</div>
+		<div class='char-set-caption'>not with caron</div>
+	</div>
+	
+</div>
+
+<div class='char-entry'>
+	
+	<div class='
+		char-group 
+		char-group--correct 
+	'>
+		<div class="char-set">
+		
+			<div class="char">
+				<div class="char-sample">Ș</div>
+				
+				<div class="unicode">
+					<code><strong>U+0218</strong> LATIN CAPITAL LETTER S WITH COMMA BELOW</code>
+				</div>
+				
+			</div>
+		
+			<div class="char">
+				<div class="char-sample">ș</div>
+				
+				<div class="unicode">
+					<code><strong>U+0219</strong> LATIN SMALL LETTER S WITH COMMA BELOW</code>
+				</div>
+				
+			</div>
+		
+		</div>
+		<div class='char-set-caption'>with comma below</div>
+	</div>
+	
+	<div class='
+		char-group 
+		char-group--incorrect 
+	'>
+		<div class="char-set">
+		
+			<div class="char">
+				<div class="char-sample">Ş</div>
+				
+				<div class="unicode">
+					<code><strong>U+015E</strong> LATIN CAPITAL LETTER S WITH CEDILLA</code>
+				</div>
+				
+			</div>
+		
+			<div class="char">
+				<div class="char-sample">ş</div>
+				
+				<div class="unicode">
+					<code><strong>U+015F</strong> LATIN SMALL LETTER S WITH CEDILLA</code>
+				</div>
+				
+			</div>
+		
+		</div>
+		<div class='char-set-caption'>not with cedilla</div>
+	</div>
+	
+</div>
+
+<div class='char-entry'>
+	
+	<div class='
+		char-group 
+		char-group--correct 
+	'>
+		<div class="char-set">
+		
+			<div class="char">
+				<div class="char-sample">Ț</div>
+				
+				<div class="unicode">
+					<code><strong>U+021A</strong> LATIN CAPITAL LETTER T WITH COMMA BELOW</code>
+				</div>
+				
+			</div>
+		
+			<div class="char">
+				<div class="char-sample">ț</div>
+				
+				<div class="unicode">
+					<code><strong>U+021B</strong> LATIN SMALL LETTER T WITH COMMA BELOW</code>
+				</div>
+				
+			</div>
+		
+		</div>
+		<div class='char-set-caption'>with comma below</div>
+	</div>
+	
+	<div class='
+		char-group 
+		char-group--incorrect 
+	'>
+		<div class="char-set">
+		
+			<div class="char">
+				<div class="char-sample">Ţ</div>
+				
+				<div class="unicode">
+					<code><strong>U+0162</strong> LATIN CAPITAL LETTER T WITH CEDILLA</code>
+				</div>
+				
+			</div>
+		
+			<div class="char">
+				<div class="char-sample">ţ</div>
+				
+				<div class="unicode">
+					<code><strong>U+0163</strong> LATIN SMALL LETTER T WITH CEDILLA</code>
+				</div>
+				
+			</div>
+		
+		</div>
+		<div class='char-set-caption'>not with cedilla</div>
+	</div>
+	
+</div>
+
+<div class='char-entry'>
+	
+	<div class='
+		char-group 
+		char-group--correct 
+	'>
+		<div class="char-set">
+		
+			<div class="char">
+				<div class="char-sample"><span class="dim">abc</span>’</div>
+				
+				<div class="unicode">
+					<code><strong>U+2019</strong> RIGHT SINGLE QUOTATION MARK</code>
+				</div>
+				
+			</div>
+		
+		</div>
+		<div class='char-set-caption'>apostrophe</div>
+	</div>
+	
+	<div class='
+		char-group 
+		char-group--incorrect 
+	'>
+		<div class="char-set">
+		
+			<div class="char">
+				<div class="char-sample"><span class="dim">abc</span>'</div>
+				
+				<div class="unicode">
+					<code><strong>U+0027</strong> APOSTROPHE</code>
+				</div>
+				
+			</div>
+		
+		</div>
+		<div class='char-set-caption'>not plain apostrophe</div>
+	</div>
+	
+	<div class='
+		char-group 
+		char-group--incorrect 
+	'>
+		<div class="char-set">
+		
+			<div class="char">
+				<div class="char-sample"><span class="dim">abc</span>′</div>
+				
+				<div class="unicode">
+					<code><strong>U+2032</strong> PRIME</code>
+				</div>
+				
+			</div>
+		
+		</div>
+		<div class='char-set-caption'>not prime</div>
+	</div>
+	
+</div>
+
+<div class='char-entry'>
+	
+	<div class='
+		char-group 
+		char-group--correct 
+	'>
+		<div class="char-set">
+		
+			<div class="char">
+				<div class="char-sample">„<span class="dim">abc</span>”</div>
+				
+				<div class="unicode">
+					<code><strong>U+201E</strong> DOUBLE LOW-9 QUOTATION MARK</code>
+				</div>
+				
+				<div class="unicode">
+					<code><strong>U+201D</strong> RIGHT DOUBLE QUOTATION MARK</code>
+				</div>
+				
+			</div>
+		
+		</div>
+		<div class='char-set-caption'>99 down, 99 up</div>
+	</div>
+	
+	<div class='
+		char-group 
+		char-group--incorrect 
+	'>
+		<div class="char-set">
+		
+			<div class="char">
+				<div class="char-sample">„<span class="dim">abc</span>“</div>
+				
+				<div class="unicode">
+					<code><strong>U+201E</strong> DOUBLE LOW-9 QUOTATION MARK</code>
+				</div>
+				
+				<div class="unicode">
+					<code><strong>U+201C</strong> LEFT DOUBLE QUOTATION MARK</code>
+				</div>
+				
+			</div>
+		
+		</div>
+		<div class='char-set-caption'>not 99 down, 66 up</div>
+	</div>
+	
+	<div class='
+		char-group 
+		char-group--incorrect 
+	'>
+		<div class="char-set">
+		
+			<div class="char">
+				<div class="char-sample">“<span class="dim">abc</span>”</div>
+				
+				<div class="unicode">
+					<code><strong>U+201C</strong> LEFT DOUBLE QUOTATION MARK</code>
+				</div>
+				
+				<div class="unicode">
+					<code><strong>U+201D</strong> RIGHT DOUBLE QUOTATION MARK</code>
+				</div>
+				
+			</div>
+		
+		</div>
+		<div class='char-set-caption'>not 66 up, 99 up</div>
+	</div>
+	
+	<div class='
+		char-group 
+		char-group--incorrect 
+	'>
+		<div class="char-set">
+		
+			<div class="char">
+				<div class="char-sample">"<span class="dim">abc</span>"</div>
+				
+				<div class="unicode">
+					<code><strong>U+0022</strong> QUOTATION MARK</code>
+				</div>
+				
+				<div class="unicode">
+					<code><strong>U+0022</strong> QUOTATION MARK</code>
+				</div>
+				
+			</div>
+		
+		</div>
+		<div class='char-set-caption'>not plain quotes</div>
+	</div>
+	
+</div>
+
+<div class='char-entry'>
+	
+	<div class='
+		char-group 
+		char-group--correct 
+	'>
+		<div class="char-set">
+		
+			<div class="char">
+				<div class="char-sample"><span class="dim">„a</span>«<span class="dim">b</span>»<span class="dim">c”</span></div>
+				
+				<div class="unicode">
+					<code><strong>U+00AB</strong> LEFT-POINTING DOUBLE ANGLE QUOTATION MARK</code>
+				</div>
+				
+				<div class="unicode">
+					<code><strong>U+00BB</strong> RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK</code>
+				</div>
+				
+			</div>
+		
+		</div>
+		<div class='char-set-caption'>guillemets</div>
+	</div>
+	
+</div>
+
+
+		
+		
+	</article>
+	<footer>
+		<strong>ășț pls</strong> is a thing made by <a href='https://danburzo.ro'>Dan Cătălin Burzo</a>.
+	</footer>
+</body>
 </html>

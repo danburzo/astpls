@@ -14,5 +14,9 @@ module.exports = {
 			return `${stem}.${ext}`;
 		}
 		return `${stem}/index.${ext}`;
+	},
+	strings: {
+		tagline: 'Fițuică tipografică pentru limba română',
+		footer: "<strong>ășț pls</strong> este un lucru făcut de <a href='https://danburzo.ro'>Dan Cătălin Burzo</a>."
 	}
 };

@@ -2,5 +2,9 @@
 	"layout": "layouts/base.njk",
 	"page": {
 		"lang": "en"
+	},
+	"strings": {
+		"tagline": "Typographic cheatsheet for the Romanian language",
+		"footer": "<strong>ășț pls</strong> is a thing made by <a href='https://danburzo.ro'>Dan Cătălin Burzo</a>."
 	}
 }

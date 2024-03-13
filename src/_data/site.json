@@ -1,0 +1,14 @@
+{
+	"languages": [
+		{
+			"label": "Ro",
+			"path": "/",
+			"code": "ro"
+		},
+		{
+			"label": "En",
+			"path": "/en/",
+			"code": "en"
+		}
+	]
+}

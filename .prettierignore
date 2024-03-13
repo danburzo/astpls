@@ -2,3 +2,4 @@
 # and it breaks .njk templates by introducing random whitespace.
 *.md
 *.njk
+build/*

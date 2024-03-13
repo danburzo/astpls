@@ -1,0 +1,27 @@
+{% for section in chars.sections %}
+<h2>{{ section.title[page.lang] }}</h2>
+{% for row in section.rows %}
+<div class='char-entry'>
+	{% for group in row.groups %}
+	<div class='
+		char-group 
+		{{ "char-group--correct" if group.correct else "char-group--incorrect" }} 
+	'>
+		<div class="char-set">
+		{% for item in group.items %}
+			<div class="char">
+				<div class="char-sample">{{ item.char | safe }}</div>
+				{% for code in item.codes %}
+				<div class="unicode">
+					<code><strong>{{ code.code }}</strong> {{ code.label }}</code>
+				</div>
+				{% endfor %}
+			</div>
+		{% endfor %}
+		</div>
+		<div class='char-set-caption'>{{ group.caption[page.lang] }}</div>
+	</div>
+	{% endfor %}
+</div>
+{% endfor %}
+{% endfor %}
